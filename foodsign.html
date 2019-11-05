@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Signin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  	body
+  	{
+  		background: url('3.jpg')no-repeat;
+  		background-size: cover;
+  	}
+  </style>
+  <script type="text/javascript">
+		function abc()
+		{
+			var a=document.getElementById('uname');
+			var b=document.getElementById('pass');
+			if(a.value.trim()=="")
+			{
+				//alert("username is blank!!");
+				document.getElementById("lab").style.visibility="visible";
+				a.style.border="solid 1px red";
+				return false;
+			}
+			else if(a.value.trim().length>=3)
+			{
+                true;
+			}
+			else
+			{
+				alert("name is too short!!");
+				return false;
+			}
+			if(b.value.trim()=="")
+			{
+               //alert("password is blank!!");
+               document.getElementById('lab1').style.visibility="visible";
+               b.style.border="solid 1px red";
+               return false;
+			}
+			else if(b.value.trim().length<5)
+			{
+				alert("password too short!!");
+				b.style.border="solid 1px red";
+				return false;
+			}
+			else
+			{
+				true;
+			}
+		}
+	</script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">
+			<div class="jumbotron" style="margin-top: 150px">
+				<h1>Login</h1><br>
+			<form action="index.html" onsubmit="return abc()">
+				<div class="form-group">
+					<input type="email" name="" class="form-control" placeholder="Enter-Email" required>
+				</div>
+				<div class="form-group">
+					<input type="password" name="" class="form-control" placeholder="Enter-Password" required>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" name="">
+						Remember Me
+					</label>
+				</div>
+				  <button type="submit" class="btn btn-primary ml-5">Sign in</button><br><br>
+				<a href="#">Do not Remember Password ?</a><br><br>
+				<a href="foodsignup.html">Don't have an Account ?</a>
+			</form>
+			<div class="col-lg-4"></div>
+		</div>
+	</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
